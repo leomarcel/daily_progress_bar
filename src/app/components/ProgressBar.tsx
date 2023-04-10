@@ -59,7 +59,7 @@ const styles = {
     color: "#444",
     fontWeight: "bold"
   },
-};
+} as const;
 
 
 export default ProgressBar;
