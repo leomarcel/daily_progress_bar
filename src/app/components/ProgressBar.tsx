@@ -22,11 +22,12 @@ function ProgressBar(): JSX.Element {
 
   return (
     <div style={styles.container}>
+      <p className="w-full mb-4 justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl dark:border-neutral-800 dark:from-inherit rounded-xl border bg-gray-200 p-3 dark:bg-zinc-800/30 font-mono font-bold">Percentage of the day that has elapsed</p>
       <div style={styles.progressBarContainer} className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]">
         <div
           style={{...styles.progressBar, width: `${percentage}%`}}
         />
-        <div style={styles.progressText}>Percentage of the day that has elapsed {percentage.toFixed(3)}%</div>
+        <div style={styles.progressText}>{percentage.toFixed(3)}%</div>
       </div>
     </div>
   );
@@ -36,6 +37,11 @@ const styles = {
   container: {
     textAlign: "center",
     width: "100%",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 10,
   },
   progressBarContainer: {
     height: 30,
@@ -47,7 +53,7 @@ const styles = {
   progressBar: {
     height: "100%",
     borderRadius: 15,
-    backgroundColor: "#70a1ff",
+    backgroundColor: "rgb(39 39 42 / 0.9)",
     transition: "width 0.5s ease-in-out"
   },
   progressText: {
@@ -56,7 +62,7 @@ const styles = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     fontSize: 16,
-    color: "#444",
+    color: "#fff",
     fontWeight: "bold"
   },
 } as const;
