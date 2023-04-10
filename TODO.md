@@ -7,3 +7,4 @@ We accept pull requests!
 - [ ] Responsive
 - [ ] Light / Dark mode
 - [ ] Improvement
+- [ ] Add Google Analytics
